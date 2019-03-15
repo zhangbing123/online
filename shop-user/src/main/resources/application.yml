@@ -2,6 +2,10 @@
 spring:
   application:
     name: shopuser
+  redis:
+    cluster:
+      nodes: 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382,127.0.0.1:6383,127.0.0.1:6384,127.0.0.1:6385
+      commandTimeout: 5000
 
 server:
   port: 8082
@@ -11,4 +15,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8081/eureka/ #指定注册中心地址
+
 

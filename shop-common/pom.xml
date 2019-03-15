@@ -12,5 +12,13 @@
     <groupId>com.zb.onlineshop</groupId>
     <artifactId>shop-common</artifactId>
 
+    <dependencies>
+        <!-- 添加jedis依赖 -->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+    </dependencies>
+
 
 </project>
