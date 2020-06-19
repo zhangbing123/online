@@ -1,19 +1,20 @@
+server:
+  port: 8082
 
 spring:
   application:
     name: shopuser
   redis:
     cluster:
-      nodes: 127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382,127.0.0.1:6383,127.0.0.1:6384,127.0.0.1:6385
+      nodes: 127.0.0.1:6379,127.0.0.1:6380,127.0.0.1:6381,127.0.0.1:6382,127.0.0.1:6383,127.0.0.1:6384
       commandTimeout: 5000
-
-server:
-  port: 8082
-
+  cloud:
+    discovery:
+      enabled: true
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8081/eureka/ #指定注册中心地址
+      defaultZone: http://localhost:8000/eureka/ #指定注册中心地址
 
 

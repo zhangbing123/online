@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="shop-common" />
         <module name="shop-eureka" />
+        <module name="shop-inventory" />
         <module name="shop-order" />
         <module name="shop-parent" />
         <module name="shop-product" />
@@ -17,6 +18,7 @@
     <bytecodeTargetLevel>
       <module name="shop-common" target="1.8" />
       <module name="shop-eureka" target="1.8" />
+      <module name="shop-inventory" target="1.8" />
       <module name="shop-order" target="1.8" />
       <module name="shop-parent" target="1.8" />
       <module name="shop-product" target="1.8" />

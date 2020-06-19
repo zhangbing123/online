@@ -1,12 +1,14 @@
-
+#注册中心eureka服务配置
 server:
-  port: 8081
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url:
-      defalutZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #制定注册中心地址
+  port: 8000
 
+eureka:
+  environment: ${spring.profiles.active}
+  client:
+    register-with-eureka: false #本服务不注册到注册中心
+    fetch-registry: false #为true时，可以启动，但报异常：Cannot execute request on any known server
+spring:
+  profiles:
+    active: dev
+  application:
+    name: eureka-server
